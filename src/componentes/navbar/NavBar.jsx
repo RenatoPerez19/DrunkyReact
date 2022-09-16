@@ -1,51 +1,36 @@
 import "./navbar.css"
 
 
+
 function Nav(){
 
-let StyleHeader={
-    display: "flex",
-    flexWrap: "wrap",
-    justifyContent: "space-around",
-    top: 0 ,
-    backgroundColor: "grey",
-    
-    
-}
-
-let StyleNav={
-    display:"flex",
-    flexWrap:"wrap",
-    justifyContent:"space-around",
-    gap:"3px",
-    textDecoration:"none",
-    
-}
-
-let StyleItem={
-    color: "white",
-    fontSize: 25,
-    textDecoration:"none",
-
-}
     return(
-        <header style={StyleHeader}>
-        <nav style={StyleNav}>
-            <ul style={StyleNav}>
-                <a style={StyleItem}>Inicio</a>
-                <br></br>
-                <a style={StyleItem}>New in</a>
-                <br></br>
-                <a style={StyleItem}>contactos</a>
-                <br></br>
-                <a style={StyleItem}>ofertas</a>
-                <br></br>
-                <i className="bi bi-cart-plus-fill"></i>
-            </ul>
-            
-        </nav>
+        <header className="flex fondoNav NavFlex">
+            <nav className="flex">
+                <div className="fondoNav">
+                    <div className="anclas NavFlex">
+                        <div>
+                            <h3 className="anclas NavFlex">Drunky</h3>
+                        </div>
+                        <li >
+                            <a href="#" className="anclas">Inicio</a>
+                        </li>
+                        <li >
+                            <a href="#" className="anclas">New In</a>
+                        </li>
+                        <li >
+                            <a href="#" className="anclas">contacto</a>
+                        </li>
+                        <div>
+                            <i class="bi bi-cart-plus-fill carrito"></i>
+                        </div>
+                    </div>
+                
+                        
+                </div>
+            </nav>
 
-    </header>
+        </header>
     );
 
 }

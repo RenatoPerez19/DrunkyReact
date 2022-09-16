@@ -1,6 +1,32 @@
-.navFex{
+.flex{
     display: flex;
-    justify-content: space-around;
+}
+
+.NavFlex{
+    display: flex;
+    justify-content: left;
     flex-wrap: wrap;
-    background-color: grey;
+    gap: 30px;
+}
+
+.fondoNav{
+    background-color: rgb(141, 51, 51);
+    padding: 20px;
+}
+
+.anclas{
+    list-style-type: none;
+    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    text-align: left;
+    font-size: 30px;
+    color:white;
+    text-decoration: none;
+    
+}
+
+.carrito{
+    color:white;
+    font-size: 35px;
+
+
 }
