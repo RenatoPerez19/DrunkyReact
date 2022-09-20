@@ -1,3 +1,12 @@
 .FondoDiv{
-    background-color: red;
+    color: black;
+    padding: 50px;
+    background-color:rgb(141, 51, 51);
+}
+
+.Botones{
+    background-color: grey;
+    font-size: 15px;
+    border-radius: 10px;
+
 }

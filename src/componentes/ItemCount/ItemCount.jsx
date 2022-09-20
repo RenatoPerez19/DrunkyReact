@@ -33,10 +33,12 @@ function ItemCount(props) {
 
     <div className='FondoDiv'>
         <h1>Entrega de contador</h1>
-        <button onClick={handleSubstract}>-</button>
-        <button>{count}</button>
-        <button onClick={handleAdd}>+</button>
-        <button onClick={OnAdd}>Agregar al carrito</button>
+        <button className='Botones' onClick={handleSubstract}>-</button>
+        <button className='Botones'>{count}</button>
+        <button className='Botones' onClick={handleAdd}>+</button>
+        <div>
+        <button className='Botones' onClick={OnAdd}>Agregar al carrito</button>
+        </div>
     </div>
     )
 }
