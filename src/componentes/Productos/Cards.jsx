@@ -1,5 +1,6 @@
 import "./card.css";
 import Button from "../boton/Button";
+import ItemCount from "../ItemCount/ItemCount";
 
 function Cards(props) {
     return (
@@ -12,7 +13,11 @@ function Cards(props) {
                 <p>descripcion</p>
                 <h4>${props.price}</h4>
             </div>
-            <Button text="ver mas"/>
+            <Button>
+                Ver mas
+            </Button>
+            
+            
         </div>
     
     
