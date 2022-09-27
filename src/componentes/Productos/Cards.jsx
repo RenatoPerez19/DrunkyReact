@@ -10,7 +10,7 @@ function Cards(props) {
             </div>
             <div className="card-detail">
                 <h3>{props.title}</h3>
-                <p>descripcion</p>
+                <p>{props.detail}</p>
                 <h4>${props.price}</h4>
             </div>
             <Button>
