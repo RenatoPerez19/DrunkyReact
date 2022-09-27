@@ -66,3 +66,11 @@ export default function getItem(){
     });
 
 }
+
+export  function SingleGetItem(){
+    return new Promise((resolve,reject)=>{
+        setTimeout(()=>{
+            resolve(data[1])
+        },2000)
+    })
+}

@@ -5,6 +5,7 @@ import Nav from "./componentes/navbar/NavBar"
 import ItemListContainer from './componentes/Productos/ItemListContainer';
 import Botonclick from "./componentes/Botonclick/Botonclick";
 import ItemCount from "./componentes/ItemCount/ItemCount";
+import ItemDetailContainer from "./componentes/itemDetailContainer/ItemDetailContainer";
 
 
 
@@ -13,9 +14,10 @@ function App() {
     <div className="App">
       <header/>
       <Nav/>
-      <ItemListContainer greeting="Drunky , tienda de zapatillas"/>
+      {/*<ItemListContainer greeting="Drunky , tienda de zapatillas"/>*/}
       <Botonclick/>
       <ItemCount inicial={1} stock={10}/>
+      <ItemDetailContainer/>
       
 
     </div>
