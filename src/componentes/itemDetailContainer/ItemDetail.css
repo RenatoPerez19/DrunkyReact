@@ -1,0 +1,19 @@
+.contenedor{
+    background-image: linear-gradient(#eedada,rgb(209, 105, 105), rgb(150, 63, 63));
+    padding: 40px;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    
+}
+.div{
+    font-size: 15px;
+    font-family:Arial, Helvetica, sans-serif;
+    color: rgb(26, 25, 25);
+    text-align: left;
+    
+}
+.flex{
+    display: flex;
+    flex-wrap: wrap;
+}

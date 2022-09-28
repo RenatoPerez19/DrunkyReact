@@ -4,7 +4,7 @@ const data =[{
     price: 9800,
     detail: "zapatilla retro , insipirada en los años 90 , con detalles de nubuck",
     stock: 6,
-    categoria: "zapatillas ",
+    categoria: "zapatillas urbanas ",
     img : "/public/assets/zapatillas/zapatillalacoste2.jpg",
 },
 {
@@ -13,7 +13,7 @@ const data =[{
     price: 9800,
     detail: "zapatilla retro , insipirada en los años 90 , con detalles de nubuck",
     stock: 6,
-    categoria: "zapatillas ",
+    categoria: "zapatillas urbanas ",
     img : "/public/assets/zapatillas/zapatillalacoste2.jpg",
 },
 {
@@ -22,7 +22,7 @@ const data =[{
     price: 9800,
     detail: "zapatilla retro , insipirada en los años 90 , con detalles de nubuck",
     stock: 6,
-    categoria: "zapatillas ",
+    categoria: "zapatillas urbanas",
     img : "/public/assets/zapatillas/zapatillalacoste2.jpg",
 },
 {
@@ -40,7 +40,7 @@ const data =[{
     price: 9800,
     detail: "zapatilla retro , insipirada en los años 90 , con detalles de nubuck",
     stock: 6,
-    categoria: "zapatillas ",
+    categoria: "zapatillas urbanas ",
     img : "/public/assets/zapatillas/zapatillalacoste2.jpg",
 },
 {
@@ -49,8 +49,8 @@ const data =[{
     price: 9800,
     detail: "zapatilla retro , insipirada en los años 90 , con detalles de nubuck",
     stock: 6,
-    categoria: "zapatillas ",
-    img : "/assets/zapatillas/zapatillalacoste2.jpg",
+    categoria: "zapatillas urbanas ",
+    img : "/public/assets/zapatillas/zapatillalacoste2.jpg",
 },
 ]
 
@@ -71,6 +71,6 @@ export  function SingleGetItem(){
     return new Promise((resolve,reject)=>{
         setTimeout(()=>{
             resolve(data[1])
-        },2000)
+        },1000)
     })
 }
