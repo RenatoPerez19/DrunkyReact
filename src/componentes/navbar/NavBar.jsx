@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 import "./navbar.css"
 
 
@@ -13,16 +14,16 @@ function Nav(){
                             <h3 className="anclas NavFlex">Drunky</h3>
                         </div>
                         <li >
-                            <a href="#" className="anclas">Inicio</a>
+                            <Link to="/" className="anclas">Inicio</Link>
                         </li>
                         <li >
-                            <a href="#" className="anclas">New In</a>
+                            <Link to="/categoria/zapatillas" className="anclas">New In</Link>
                         </li>
                         <li >
-                            <a href="#" className="anclas">contacto</a>
+                            <Link to="/categoria/buzos" className="anclas">buzos</Link>
                         </li>
                         <div>
-                            <i class="bi bi-cart-plus-fill carrito"></i>
+                            <i className="bi bi-cart-plus-fill carrito"></i>
                         </div>
                     </div>
                 

@@ -3,27 +3,18 @@ const data =[{
     title: "zapatilla nike",
     price: 9800,
     detail: "zapatilla retro , insipirada en los años 90 , con detalles de nubuck",
-    stock: 6,
-    categoria: "zapatillas urbanas ",
-    img : "/public/assets/zapatillas/zapatillalacoste2.jpg",
+    stock: 10,
+    categoria: "zapatillas  ",
+    img : "/assets/zapatillas/zapatillalacoste2.jpg",
 },
 {
     id: 2,
     title: "zapatilla adidas",
-    price: 9800,
+    price: 11800,
     detail: "zapatilla retro , insipirada en los años 90 , con detalles de nubuck",
-    stock: 6,
-    categoria: "zapatillas urbanas ",
-    img : "/public/assets/zapatillas/zapatillalacoste2.jpg",
-},
-{
-    id: 2,
-    title: "zapatilla adidas",
-    price: 9800,
-    detail: "zapatilla retro , insipirada en los años 90 , con detalles de nubuck",
-    stock: 6,
-    categoria: "zapatillas urbanas",
-    img : "/public/assets/zapatillas/zapatillalacoste2.jpg",
+    stock: 8,
+    categoria: "zapatillas  ",
+    img : "/assets/zapatillas/zapatillalacoste2.jpg",
 },
 {
     id: 3,
@@ -31,26 +22,35 @@ const data =[{
     price: 9800,
     detail: "zapatilla retro , insipirada en los años 90 , con detalles de nubuck",
     stock: 6,
-    categoria: "zapatillas ",
-    img : "/public/assets/zapatillas/zapatillalacoste2.jpg",
+    categoria: "zapatillas",
+    img : "/assets/zapatillas/zapatillalacoste2.jpg",
 },
 {
     id: 4,
     title: "zapatilla adidas",
-    price: 9800,
+    price: 19800,
     detail: "zapatilla retro , insipirada en los años 90 , con detalles de nubuck",
     stock: 6,
-    categoria: "zapatillas urbanas ",
-    img : "/public/assets/zapatillas/zapatillalacoste2.jpg",
+    categoria: "zapatillas ",
+    img : "/assets/zapatillas/zapatillalacoste2.jpg",
 },
 {
     id: 5,
     title: "zapatilla adidas",
-    price: 9800,
+    price: 18800,
     detail: "zapatilla retro , insipirada en los años 90 , con detalles de nubuck",
     stock: 6,
-    categoria: "zapatillas urbanas ",
-    img : "/public/assets/zapatillas/zapatillalacoste2.jpg",
+    categoria: "zapatillas",
+    img : "/assets/zapatillas/zapatillalacoste2.jpg",
+},
+{
+    id: 6,
+    title: "buzo de la marca drew",
+    price: 10000,
+    detail: "Este buzo , esta diseñado por Justin Bieber ",
+    stock: 6,
+    categoria: "buzos  ",
+    img : "/assets/zapatillas/zapatillalacoste2.jpg",
 },
 ]
 
@@ -67,10 +67,30 @@ export default function getItem(){
 
 }
 
-export  function SingleGetItem(){
+export  function SingleGetItem(idItem){
     return new Promise((resolve,reject)=>{
+        let itemFind = data.find((item)=>{
+            return item.id === parseInt(idItem)
+        });
+
+        if(itemFind) resolve(itemFind);
+        else reject(new Error("item no encontrado"));
+    });
+}
+
+
+export function getItemByCategoria(cat){
+
+    return new Promise((resolve,reject)=>{
+
+        let itemFind = data.filter((item)=>{
+            return item.categoria === cat;
+        });
         setTimeout(()=>{
-            resolve(data[1])
-        },1000)
-    })
+        if(itemFind) resolve(itemFind);
+
+        else reject(new Error("item no encontrado"));
+        },1500)
+    });
+    
 }

@@ -8,7 +8,7 @@ function Button({children}) {
 
     
     function handleclick(){
-        alert("clickeado")
+        
         setColor("green")
     }
     return (

@@ -1,7 +1,13 @@
 import React,{useState, useEffect} from "react";
 import Cards from "./Cards";
-import getItems from "../../services/mocKAPI"
+
 import itemsList from "./itemsList";
+
+import { useParams} from "react-router-dom"
+import getItems, {getItemByCategoria} from "../../services/mocKAPI"
+
+
+
 
 
 
@@ -10,14 +16,17 @@ import itemsList from "./itemsList";
 function ItemListContainer(props) {
     let [data , setData]=useState([]);
 
-    useEffect(()=>{
-        getItems().then((respuestaDatos)=>{
-            setData(respuestaDatos);
-        })
-    },
-        []
-    )
+    const{cat}= useParams();
+    
 
+    useEffect(()=>{
+    if (cat=== undefined){
+        getItems().then((respuestaDatos)=> setData(respuestaDatos));
+    }
+    else{
+        getItemsByCategory(cat).then((respuestaDatos)=> setData(respuestaDatos));
+    }
+    } ,[cat]); 
 
     return (
         <div>
@@ -27,6 +36,7 @@ function ItemListContainer(props) {
                     data.map((item)=>{
                         return <Cards 
                         key={item.id}
+                        id={item.id}
                         price={item.price}
                         title={item.title}
                         img={item.img}

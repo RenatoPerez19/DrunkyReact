@@ -1,15 +1,19 @@
 import React , {useState, useEffect} from 'react'
-import CardDetail from '../Productos/CardDetail'
 import {SingleGetItem}   from "../../services/mocKAPI"
-import "./ItemDetail.css"
+import "./ItemDetail.css";
+import {useParams} from "react-router-dom";
 
 function ItemDetailContainer() {
+
     let [data,setData] = useState({});
 
-    useEffect(()=>{
-        SingleGetItem().then((respuestaDatos)=>setData(respuestaDatos));
+    const params = useParams();
+    const id = params.id;
 
-    },[]);
+    useEffect(()=>{
+        SingleGetItem(id).then((respuestaDatos)=>setData(respuestaDatos));
+
+    },[id]);
 
     return (
     
