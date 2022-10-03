@@ -24,7 +24,7 @@ function ItemListContainer(props) {
         getItems().then((respuestaDatos)=> setData(respuestaDatos));
     }
     else{
-        getItemsByCategory(cat).then((respuestaDatos)=> setData(respuestaDatos));
+        getItemByCategoria(cat).then((respuestaDatos)=> setData(respuestaDatos));
     }
     } ,[cat]); 
 
