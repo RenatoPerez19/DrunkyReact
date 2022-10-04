@@ -1,43 +1,42 @@
 import React, {useState} from 'react'
 import "./ItemCount.css"
+import "../Productos/Cards"
+import "../itemDetailContainer/ItemDetailContainer"
 
 
-function ItemCount(props) {
-    const[count , setCount]=useState(props.inicial)
+function ItemCount({stock , OnAddToCart}) {
+    const[count , setCount]=useState(1);
 
     function handleAdd(){
-        if(count === props.stock){
-            alert("llego al maximo stock")
-
-        }else{
-            setCount(count+1)
-        }
-        props.stock = props.stock - count;
+        if(count < stock)setCount(count+1)
     }
 
     function handleSubstract(){
-        if(count ==1){
-            alert("no puede tener menos de un producto")
-        }else{
-            setCount(count-1)
-        }
+        if(count > 1) setCount(count-1)
         
     }
 
-    function OnAdd(){
+
+    
+    
+        
+
+    
+    function OnAddToCart(){
+        alert(`agregaste al carrito! ${count}`)
+
     
     }
 
 
     return(
 
-    <div className='FondoDiv'>
-        <h1>Entrega de contador</h1>
+    <div >
         <button className='Botones' onClick={handleSubstract}>-</button>
-        <button className='Botones'>{count}</button>
+        <span>{count}</span>
         <button className='Botones' onClick={handleAdd}>+</button>
         <div>
-        <button className='Botones' onClick={OnAdd}>Agregar al carrito</button>
+        <button className='Botones' onClick={()=>OnAddToCart(count)}>Agregar al carrito</button>
         </div>
     </div>
     )

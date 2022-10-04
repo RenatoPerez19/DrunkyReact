@@ -1,7 +1,10 @@
 import React , {useState, useEffect} from 'react'
 import {SingleGetItem}   from "../../services/mocKAPI"
 import "./ItemDetail.css";
-import {useParams} from "react-router-dom";
+import "../ItemCount/ItemCount"
+
+import {useParams , Link} from "react-router-dom";
+import ItemCount from '../ItemCount/ItemCount';
 
 function ItemDetailContainer() {
 
@@ -15,6 +18,16 @@ function ItemDetailContainer() {
 
     },[id]);
 
+
+
+    const[ estadoCart , setEstadoCart]= useState(false)
+
+    function handleAddToCart(){
+        
+        setEstadoCart(true)
+
+    }
+
     return (
     
         <div className='contenedor'>
@@ -24,6 +37,7 @@ function ItemDetailContainer() {
                 <h4>Stock:{data.stock}</h4>
                 <h4>Categoria:{data.categoria}</h4>
                 <strong>${data.price}</strong>
+                {estadoCart === false? <ItemCount stock={5} OnAddToCart={handleAddToCart}/> : <Link to="/cart"><button>finalizar compra</button></Link>}
             </div>
             <div >
                 <img src="https://place-hold.it/300" alt="card-img"></img>

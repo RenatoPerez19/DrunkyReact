@@ -90,7 +90,7 @@ export function getItemByCategoria(cat){
         if(itemFind) resolve(itemFind);
 
         else reject(new Error("item no encontrado"));
-        },1500)
+        },1000)
     });
     
 }
