@@ -23,10 +23,12 @@ function ItemDetailContainer() {
     const[ estadoCart , setEstadoCart]= useState(false)
 
     function handleAddToCart(){
-        
-        setEstadoCart(true)
-
+        setEstadoCart(true);
     }
+
+        
+
+    
 
     return (
     

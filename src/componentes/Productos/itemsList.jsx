@@ -1,7 +1,7 @@
 import React from 'react'
 import Cards from './Cards'
 
-function itemsList(props) {
+function itemsList({props}) {
     return (
         <div>
             {
@@ -13,6 +13,7 @@ function itemsList(props) {
                         img={item.img}
                         detail={item.detail}
                         stock={item.stock}
+                        categoria={item.categoria}
 
                         
                         ></Cards>

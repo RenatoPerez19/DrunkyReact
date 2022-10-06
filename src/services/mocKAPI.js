@@ -49,7 +49,7 @@ const data =[{
     price: 10000,
     detail: "Este buzo , esta diseñado por Justin Bieber ",
     stock: 6,
-    categoria: "buzos  ",
+    categoria: "buzos ",
     img : "/assets/zapatillas/zapatillalacoste2.jpg",
 },
 ]
@@ -84,7 +84,7 @@ export function getItemByCategoria(cat){
     return new Promise((resolve,reject)=>{
 
         let itemFind = data.filter((item)=>{
-            return item.categoria === cat;
+            return item.cat === cat;
         });
         setTimeout(()=>{
         if(itemFind) resolve(itemFind);

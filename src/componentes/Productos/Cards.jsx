@@ -1,7 +1,8 @@
 import "./card.css";
 import Button from "../boton/Button";
-import ItemCount from "../ItemCount/ItemCount";
+
 import { Link } from "react-router-dom";
+
 
 function Cards(props) {
     const urlDetalle=`/zapatillas/${props.id}`

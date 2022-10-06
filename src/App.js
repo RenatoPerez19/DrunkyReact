@@ -3,10 +3,8 @@ import "bootstrap/dist/css/bootstrap.min.css";
 import './App.css';
 import Nav from "./componentes/navbar/NavBar" 
 import ItemListContainer from './componentes/Productos/ItemListContainer';
-import Botonclick from "./componentes/Botonclick/Botonclick";
-import ItemCount from "./componentes/ItemCount/ItemCount";
 import ItemDetailContainer from "./componentes/itemDetailContainer/ItemDetailContainer";
-import {BrowserRouter , Routes , Route , Link} from "react-router-dom";
+import {BrowserRouter , Routes , Route , } from "react-router-dom";
 
 
 

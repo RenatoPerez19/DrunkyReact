@@ -1,7 +1,7 @@
 import React,{useState, useEffect} from "react";
 import Cards from "./Cards";
 
-import itemsList from "./itemsList";
+
 
 import { useParams} from "react-router-dom"
 import getItems, {getItemByCategoria} from "../../services/mocKAPI"
@@ -42,6 +42,7 @@ function ItemListContainer(props) {
                         img={item.img}
                         detail={item.detail}
                         stock={item.stock}
+                        
 
                         
                         ></Cards>
