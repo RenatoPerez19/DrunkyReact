@@ -84,7 +84,7 @@ export function getItemByCategoria(cat){
     return new Promise((resolve,reject)=>{
 
         let itemFind = data.filter((item)=>{
-            return item.cat === cat;
+            return item.categoria === cat;
         });
         setTimeout(()=>{
         if(itemFind) resolve(itemFind);

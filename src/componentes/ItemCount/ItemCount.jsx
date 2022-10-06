@@ -20,10 +20,11 @@ function ItemCount({stock , OnAddToCart}) {
     
     
         
-
+    const[ estadoCart , setEstadoCart]= useState(false)
     
     function OnAddToCart(){
-        alert(`agregaste al carrito! ${count}`)
+        alert(`agregaste al carrito!`)
+        setEstadoCart(true);
 
     
     }

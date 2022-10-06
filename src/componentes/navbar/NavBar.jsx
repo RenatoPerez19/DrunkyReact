@@ -1,4 +1,5 @@
 import { Link } from "react-router-dom";
+import CartWidget from "./CartWidget";
 import "./navbar.css"
 
 
@@ -25,6 +26,7 @@ function Nav(){
                         <div>
                             <i className="bi bi-cart-plus-fill carrito"></i>
                         </div>
+                        <CartWidget></CartWidget>
                     </div>
                 
                         

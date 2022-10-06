@@ -1,12 +1,15 @@
-import React , {useState, useEffect} from 'react'
+import React , {useState, useEffect , useContext} from 'react'
 import {SingleGetItem}   from "../../services/mocKAPI"
 import "./ItemDetail.css";
 import "../ItemCount/ItemCount"
 
 import {useParams , Link} from "react-router-dom";
 import ItemCount from '../ItemCount/ItemCount';
+import  {cartContext} from "../../context/cartContext"
 
 function ItemDetailContainer() {
+
+    const { addItem}= useContext(cartContext)
 
     let [data,setData] = useState({});
 
@@ -22,10 +25,12 @@ function ItemDetailContainer() {
 
     const[ estadoCart , setEstadoCart]= useState(false)
 
-    function handleAddToCart(){
-        setEstadoCart(true);
+    function handleAddToCart(item ,count){
+        addItem(item, count)
+        
     }
 
+    
         
 
     
